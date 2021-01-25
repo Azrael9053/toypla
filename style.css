@@ -33,7 +33,7 @@ li {
   height: 100px;
 }
 
-.text-center {
+.text-center, .youtube {
   float: left;
   display: inline-block;
   width: 60%;
@@ -87,4 +87,16 @@ li {
 
 .container {
   margin: 10px 20px;
+}
+
+#luna>div, #solu>div {
+  display: inline-block;
+  width: 100%;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
