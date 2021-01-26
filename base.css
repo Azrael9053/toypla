@@ -1,44 +1,207 @@
-@charset "utf-8";
+@charset "UTF-8";
 /*
-=======================================
-  Reset CSS
-=======================================
+Theme Name: kirafore official website
+Theme URL: http://kirafore.com
+Description: kirafore official website
+Author: toypla inc.
+Version: 1.0
 */
-* {
-  box-sizing: border-box;
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, main, menu, nav, section, summary,
-time, mark, audio, video{
-  margin:0;
-  padding:0;
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
-article,aside,details,figcaption,figure,
-footer,header,main,menu,nav,section{
-  display:block;
-}
-
-html{
-  -webkit-text-size-adjust: 100%;
-}
-
-img{
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
   border: 0;
+  outline: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-ul,ol{
-  list-style-type: none;
+body {
+  font-family: "M PLUS Rounded 1c";
+  background: #ffffff;
+  color: #2e2e31;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-size: 1.6rem;
+}
+
+a {
+  color: #4343b1;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+a:hover {
+  color: #0b0b1d;
+  outline: none;
+  text-decoration: none;
+}
+a:active {
+  color: #0b0b1d;
+  outline: none;
+  text-decoration: none;
+}
+a:focus {
+  color: #0b0b1d;
+  outline: none;
+  text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
@@ -46,89 +209,1263 @@ table {
   border-spacing: 0;
 }
 
-img, input, select, textarea {
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
   vertical-align: middle;
 }
 
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.pad-1rem {
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
+}
+
+.pad-2rem {
+  padding-top: 2.0rem;
+  padding-bottom: 2.0rem;
+}
+
+.pad-3rem {
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
+}
+
+.pad-4rem {
+  padding-top: 4.0rem;
+  padding-bottom: 4.0rem;
+}
+
+.pad-5rem {
+  padding-top: 5.0rem;
+  padding-bottom: 5.0rem;
+}
+
+.pad-6rem {
+  padding-top: 6.0rem;
+  padding-bottom: 6.0rem;
+}
+
+/*--------------------------------------------------------------
+# preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #2f2f79;
+}
+
+.loader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100px;
+  text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.loader {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.75s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  left: -2px;
+  top: -2px;
+  display: none;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+}
+
 /*
-=========================================
-  Base Layout
-=========================================
-*/
+ * LOADER 6
+ */
+.loader-6 {
+  border-color: transparent;
+  border-top-color: white;
+  animation-duration: 5s;
+}
 
-/*container*/
+.loader-6::after {
+  display: block;
+  border-color: transparent;
+  border-top-color: white;
+  animation: spin 0.75s infinite ease-in-out alternate;
+}
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# toppage
+--------------------------------------------------------------*/
+#page-top {
+  z-index: 10;
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem;
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+  #page-top {
+    right: 3rem;
+  }
+}
+#page-top a {
+  background: #2f2f79;
+  color: #efefef;
+  line-height: 4rem;
+  font-size: 60%;
+  text-decoration: none;
+  width: 6rem;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  display: block;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  #page-top a {
+    line-height: 2rem;
+  }
+}
+#page-top:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.5s;
+}
 
-/*
-=========================================
-  Modules（Block）
-=========================================
-*/
-
-/*header
---------------------*/
-
-
-/*global navigation
---------------------*/
-
-
-/*Google Map
---------------------*/
-
-
-/*information
---------------------*/
-
-
-/*footer
---------------------*/
-
-
-/*
-=========================================
-  Modules（Parts）
-=========================================
-*/
-
-/*
-=========================================
-  Utilities
-=========================================
-*/
-
-/* 邊界
----------------------------------*/
-.mb0{ margin-bottom: 0 !important;}
-.mb5{ margin-bottom: 5px !important;}
-.mb10{ margin-bottom: 10px !important;}
-.mb15{ margin-bottom: 15px !important;}
-.mb20{ margin-bottom: 20px !important;}
-.mb25{ margin-bottom: 25px !important;}
-.mb30{ margin-bottom: 30px !important;}
-.mb35{ margin-bottom: 35px !important;}
-.mb40{ margin-bottom: 40px !important;}
-.mb45{ margin-bottom: 45px !important;}
-.mb50{ margin-bottom: 50px !important;}
-
-/* 水平對齊
----------------------------------*/
-.ta-l{ text-align: left; }
-.ta-r{ text-align: right; }
-.ta-c{ text-align: center; }
-
-
-/* 設定／解除Float
----------------------------------*/
-.fl{ float:left; }
-.fr{ float:right; }
-.fl-img{ float: left; margin-right: 10px; margin-bottom: 10px;}
-.fr-img{ float: right; margin-left: 10px; margin-bottom: 10px;}
-.clear{ clear:both; }
-
+/*--------------------------------------------------------------
+# Carousel slider
+--------------------------------------------------------------*/
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.2
+ */
 /* clearfix */
-.clearfix:after {
-  content: "";
+.owl-carousel .owl-wrapper:after {
+  content: ".";
   display: block;
   clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
+
+/* display none until init */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+  float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* mouse grab icon */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.2
+*/
+.owl-theme .owl-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+.owl-theme .owl-controls .owl-buttons div {
+  color: #FFF;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /*IE7 life-saver */
+  margin: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background: #869791;
+  filter: Alpha(Opacity=50);
+  /*IE7 fix*/
+  opacity: 0.5;
+}
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+  filter: Alpha(Opacity=100);
+  /*IE7 fix*/
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Styling Pagination*/
+.owl-theme .owl-controls .owl-page {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /*IE7 life-saver */
+}
+
+.owl-theme .owl-controls .owl-page span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 7px;
+  filter: Alpha(Opacity=50);
+  /*IE7 fix*/
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  filter: Alpha(Opacity=100);
+  /*IE7 fix*/
+  opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+  height: auto;
+  width: auto;
+  color: #FFF;
+  padding: 2px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading {
+  min-height: 150px;
+  background: url(AjaxLoader.gif) no-repeat center center;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  opacity: 0.5;
+  background: #2f2f79;
+}
+
+/*--------------------------------------------------------------
+# modal
+--------------------------------------------------------------*/
+.thum {
+  width: 100%;
+  border-style: none;
+}
+.thum h3 {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .thum h3 {
+    font-size: 1.2rem;
+  }
+}
+.thum img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -webkit-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -moz-box-shadow: 8px 8px 10px 0px #e6e6e6;
+}
+
+.modal-content {
+  width: 90%;
+}
+
+.modal-body img {
+  display: block;
+  margin: auto;
+  box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -webkit-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -moz-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  width: 70%;
+}
+.modal-body i {
+  background: #FF9900;
+  color: black;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# accordion
+--------------------------------------------------------------*/
+.syncer-acdn-parent {
+  margin: 1.5em 0 0;
+  padding: 0px 10px;
+}
+.syncer-acdn-parent li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.syncer-acdn-parent p {
+  margin: 0;
+  padding: 1em;
+}
+.syncer-acdn-parent h3 {
+  margin: 0;
+  padding: 0;
+}
+.syncer-acdn-parent .syncer-acdn {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+}
+.syncer-acdn-parent .syncer-acdn:hover {
+  cursor: pointer;
+}
+.syncer-acdn-parent .syncer-acdn:after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  font-size: .85em;
+  margin-top: -12.5px;
+  height: 17px;
+  line-height: 17px;
+  padding: 4px 8px;
+}
+
+.syncer-acdn-child {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.syncer-acdn-child li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #ffffff;
+  padding: 2rem 0;
+  height: 8.5rem;
+}
+.is-sticky #header {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 98;
+}
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu > li {
+  float: left;
+}
+/* .nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+} */
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+.nav-menu ul li {
+  min-width: 20rem;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 3rem;
+}
+.sf-arrows .sf-with-ul:after {
+  font-family: FontAwesome;
+  content: "\f107";
+  position: absolute;
+  right: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 0.5rem 0;
+}
+@media (max-width: 1199px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+.navbar-brand img {
+  float: left;
+  margin-top: -2.65rem;
+}
+
+.nav-menu a {
+  color: #4343b1;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  margin-top: -0.5rem;
+  display: inline-block;
+}
+.nav-menu a:hover,
+.nav-menu li:hover > a,
+.nav-menu .menu-active > a {
+  color: #0b0b1d;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  margin: 2rem 2rem 0 0;
+  border: 0;
+  background: none;
+  font-size: 2.4rem;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+#mobile-nav-toggle i {
+  font-family: FontAwesome;
+  color: #4343b1;
+  content: "\f105";
+}
+@media (max-width: 1199px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  background: rgba(47, 47, 121, 0.75);
+  position: fixed;
+  top: 0;
+  padding-top: 2rem;
+  bottom: 0;
+  z-index: 99;
+  left: -15rem;
+  width: 15rem;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#mobile-nav ul li {
+  position: relative;
+}
+#mobile-nav ul li a {
+  color: #efefef;
+  overflow: hidden;
+  padding: 1rem 2rem 1rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+#mobile-nav ul li a:hover {
+  color: #efefef;
+}
+#mobile-nav ul li li {
+  padding-left: 3rem;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: auto;
+}
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+# section
+--------------------------------------------------------------*/
+/* Sections Common
+----------------*/
+.section-title-color-back {
+  background: repeating-linear-gradient(45deg, transparent, transparent 1rem, #eceafd 0, #eceafd 2rem, transparent 0, transparent 3rem, #f1f0ff 0, #f1f0ff 4rem, transparent 0, transparent 5rem, #f0f0fa 0, #f0f0fa 6rem, transparent 0, transparent 7rem, #edecfa 0, #edecfa 8rem), repeating-linear-gradient(-45deg, transparent, transparent 1rem, #edecfc 0, #edecfc 2rem, transparent 0, transparent 3rem, #f8f7ff 0, #f8f7ff 4rem, transparent 0, transparent 5rem, #f5f3fc 0, #f5f3fc 6rem), whitesmoke;
+  background-blend-mode: multiply;
+}
+
+.section-title {
+  font-size: 4.6rem;
+  color: #121230;
+}
+
+.timeline-box {
+  height: 65rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  vertical-align:middle;
+}
+
+/* hero_aria
+----------------*/
+#hero_aria {
+  background: #ffffff;
+}
+#hero_aria img {
+  margin: auto;
+}
+
+/* slider
+----------------*/
+#slider {
+  background: #f5f5f5;
+}
+
+/* schedule
+----------------*/
+.schedule-title-color-back {
+  background: #f5f5f5;
+}
+
+.googleCalendar iframe {
+  box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -webkit-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -moz-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  width: 100%;
+  height: 60rem;
+}
+@media all and (min-width: 768px) {
+  .googleCalendar iframe {
+    height: 80rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# profile
+--------------------------------------------------------------*/
+.staff {
+  text-align: center;
+}
+.staff img {
+  width: 30rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.staff .role {
+  color: gray;
+  font-weight: normal;
+  display: block;
+}
+
+.prof-text {
+  font-weight: 300;
+}
+.prof-text h4 {
+  font-size: 4rem;
+}
+.prof-text h5 {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+.prof-text p {
+  font-size: 1.6rem;
+}
+
+.riyuki_color {
+  border: 1.2rem solid;
+  border-color: #99a8ff;
+}
+
+.riyuki_color_back {
+  background: linear-gradient(324deg, #001aff 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #001aff 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #99a8ff 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #99a8ff 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #99a8ff 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #99a8ff 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #001aff 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #001aff 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #99a8ff 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #99a8ff 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #99a8ff 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #99a8ff 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #001aff;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.aina_color {
+  border: 1.2rem solid;
+  border-color: #aee9ff;
+}
+
+.aina_color_back {
+  background: linear-gradient(324deg, #00a3e1 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #00a3e1 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #48cdff 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #48cdff 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #48cdff 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #48cdff 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #00a3e1 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #00a3e1 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #48cdff 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #48cdff 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #48cdff 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #48cdff 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #00a3e1;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.mia_color {
+  border: 1.2rem solid;
+  border-color: #ffcccc;
+}
+
+.mia_color_back {
+  background: linear-gradient(324deg, #ff0000 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ff0000 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ff6666 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ff6666 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ff6666 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ff6666 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ff0000 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ff0000 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ff6666 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ff6666 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ff6666 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ff6666 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ff0000;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.riri_color {
+  border: 1.2rem solid;
+  border-color: #6bdd5c;
+}
+
+.riri_color_back {
+  background: linear-gradient(324deg, #12eb12 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #12eb12 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #6bdd5c 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #6bdd5c 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #6bdd5c 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #6bdd5c 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #12eb12 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #12eb12 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #6bdd5c 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #6bdd5c 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #6bdd5c 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #6bdd5c 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #12eb12;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.rey_color {
+  border: 1.2rem solid;
+  border-color: #a2dbc1;
+}
+
+.rey_color_back {
+  background: linear-gradient(324deg, #36cfae 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #36cfae 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #a2dbc1 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #a2dbc1 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #a2dbc1 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #a2dbc1 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #36cfae 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #36cfae 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #a2dbc1 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #a2dbc1 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #a2dbc1 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #a2dbc1 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #36cfae;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.hatsuki_color, .momoka_color {
+  border: 1.2rem solid;
+  border-color: #ffcfe7;
+}
+
+.hatsuki_color_back, .momoka_color_back {
+  background: linear-gradient(324deg, #ff69b4 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ff69b4 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ff9cce 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ff9cce 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ff9cce 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ff9cce 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ff69b4 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ff69b4 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ff9cce 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ff9cce 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ff9cce 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ff9cce 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ff69b4;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.yura_color {
+  border: 1.2rem solid;
+  border-color: #ffdb99;
+}
+
+.yura_color_back {
+  background: linear-gradient(324deg, #ffa500 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ffa500 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ffc966 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ffc966 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ffc966 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ffc966 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ffa500 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ffa500 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ffc966 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ffc966 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ffc966 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ffc966 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ffa500;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.noe_color {
+  border: 1.2rem solid;
+  border-color: #ffff99;
+}
+
+.noe_color_back {
+  background: linear-gradient(324deg, #ffff00 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ffff00 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ffff99 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ffff99 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ffff99 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ffff99 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ffff00 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ffff00 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ffff99 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ffff99 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ffff99 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ffff99 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ffff00;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.makiho_tatsuya_color {
+  border: 1.2rem solid;
+  border-color: #ff9999;
+}
+
+.makiho_tatsuya_color_back {
+  background: linear-gradient(324deg, #ff0000 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ff0000 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ff9999 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ff9999 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ff9999 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ff9999 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ff0000 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ff0000 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ff9999 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ff9999 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ff9999 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ff9999 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ff0000;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.himeko_color, .mana_color {
+  border: 1.2rem solid;
+  border-color: #b7a3db;
+}
+
+.himeko_color_back, .mana_color_back {
+  background: linear-gradient(324deg, #6441A4 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #6441A4 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #b7a3db 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #b7a3db 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #b7a3db 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #b7a3db 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #6441A4 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #6441A4 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #b7a3db 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #b7a3db 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #b7a3db 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #b7a3db 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #6441A4;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.noa_shirase_color {
+  border: 1.2rem solid;
+  border-color: #7bdbff;
+}
+
+.noa_shirase_color_back {
+  background: linear-gradient(324deg, #00a3e1 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #00a3e1 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #7bdbff 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #7bdbff 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #7bdbff 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #7bdbff 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #00a3e1 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #00a3e1 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #7bdbff 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #7bdbff 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #7bdbff 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #7bdbff 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #00a3e1;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.yuka_homura_color {
+  border: 1.2rem solid;
+  border-color: #ffdb99;
+}
+
+.yuka_homura_color_back {
+  background: linear-gradient(324deg, #ffa500 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ffa500 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ffdb99 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ffdb99 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ffdb99 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ffdb99 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ffa500 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ffa500 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ffdb99 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ffdb99 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ffdb99 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ffdb99 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ffa500;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.mirei_kamiya_color {
+  border: 1.2rem solid;
+  border-color: #d8d9da;
+}
+
+.mirei_kamiya_color_back {
+  background: linear-gradient(324deg, #8a8d8f 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #8a8d8f 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #d8d9da 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #d8d9da 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #d8d9da 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #d8d9da 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #8a8d8f 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #8a8d8f 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #d8d9da 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #d8d9da 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #d8d9da 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #d8d9da 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #8a8d8f;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+.rin_hasumi_color {
+  border: 1.2rem solid;
+  border-color: #ffff99;
+}
+
+.rin_hasumi_color_back {
+  background: linear-gradient(324deg, #ffff00 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #ffff00 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #ffff99 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #ffff99 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #ffff99 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #ffff99 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #ffff00 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #ffff00 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #ffff99 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #ffff99 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #ffff99 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #ffff99 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #ffff00;
+  background-size: 100px 100px;
+  color: #efefef;
+  text-shadow: 1px 1px 2px black;
+}
+
+/*--------------------------------------------------------------
+# media
+--------------------------------------------------------------*/
+.media-title-color-back {
+  background: #f5f5f5;
+}
+
+/* .youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-bottom: 4rem;
+  box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -webkit-box-shadow: 8px 8px 10px 0px #e6e6e6;
+  -moz-box-shadow: 8px 8px 10px 0px #e6e6e6;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+/* discograh
+----------------*/
+.disco-title-color-back {
+  background: #f5f5f5;
+}
+
+/* audition
+----------------*/
+.audition-title-color-back {
+  background: #f5f5f5;
+}
+.audition-title-color-back h4 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* contact
+----------------*/
+.contact-title-color-back {
+  background: #f5f5f5;
+}
+
+/*--------------------------------------------------------------
+# mailform
+--------------------------------------------------------------*/
+#mail_form {
+  background: #ffffff;
+}
+#mail_form dl {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#mail_form dl dt {
+  font-size: 1.5rem;
+  clear: both;
+  width: 30%;
+  float: left;
+  border-top: 0.1rem solid #d1d0d2;
+  padding: 1.5rem 0;
+  text-align: right;
+  overflow: hidden;
+}
+#mail_form dl dt span {
+  font-size: 1.2rem;
+  display: block;
+  color: #2f2f79;
+}
+#mail_form dl dt:first-child,
+#mail_form dl dt:first-child + dd {
+  border: none;
+}
+#mail_form dd {
+  width: 65%;
+  float: right;
+  border-top: 0.1rem solid #d1d0d2;
+  padding: 1.5rem 0 1.5rem 5%;
+}
+#mail_form p {
+  font-size: 1.2rem;
+}
+
+/* -- for JavaScript ここから -------------------------------------------------------------------------------- */
+#mail_form dl dt span.required,
+#mail_form dl dt span.optional {
+  display: inline-block;
+  float: left;
+  color: #efefef;
+  line-height: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+#mail_form dl dt span.required {
+  background: #121230;
+  border: 0.1rem solid #d1d0d2;
+}
+
+#mail_form dl dt span.optional {
+  background: #5252bc;
+  border: 0.1rem solid #d1d0d2;
+}
+
+#mail_form dl dd span.error_blank,
+#mail_form dl dd span.error_format,
+#mail_form dl dd span.error_match {
+  display: block;
+  color: #fd3434;
+  margin-top: 0.3rem;
+}
+
+span.loading {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border-top: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border-right: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.5rem solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load-circle 1.0s linear infinite;
+  animation: load-circle 1.0s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.5rem;
+  margin-left: -2.5rem;
+}
+
+@-webkit-keyframes load-circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load-circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* -- for JavaScript ここまで -------------------------------------------------------------------------------- */
+#mail_form input[type="text"],
+#mail_form input[type="email"],
+#mail_form input[type="tel"] {
+  height: 3rem;
+  padding: 0.2rem 2%;
+  border: 0.1rem solid #d1d0d2;
+  border-radius: 0.3rem;
+  background: #fafafa;
+  -webkit-appearance: none;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#mail_form input[type="text"]:focus,
+#mail_form input[type="email"]:focus,
+#mail_form input[type="tel"]:focus,
+#mail_form textarea:focus {
+  box-shadow: 0 0 0.5rem #d1d0d2;
+  border: 0.1rem solid #d1d0d2;
+  background: white;
+}
+
+#mail_form ul li input[type="radio"],
+#mail_form ul li input[type="checkbox"] {
+  margin-right: 1rem;
+  margin-top: 0.7rem;
+}
+
+#mail_form ul li:first-child input[type="radio"],
+#mail_form ul li:first-child input[type="checkbox"] {
+  margin-top: 0;
+}
+
+#mail_form select {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#mail_form textarea {
+  display: block;
+  width: 90%;
+  max-width: 90%;
+  height: 20rem;
+  padding: 0.2rem 2%;
+  resize: vertical;
+  border: 0.1rem solid #d1d0d2;
+  border-radius: 0.3rem;
+  background: #fafafa;
+  -webkit-appearance: none;
+  font-size: 2rem;
+}
+
+#mail_form ul {
+  list-style-type: none;
+}
+
+#mail_form ul li label:hover {
+  cursor: pointer;
+}
+
+#mail_form input#company {
+  width: 60%;
+}
+
+#mail_form input#name_1,
+#mail_form input#name_2,
+#mail_form input#read_1,
+#mail_form input#read_2,
+#mail_form input#postal,
+#mail_form input#phone,
+#mail_form input#schedule {
+  width: 30%;
+}
+
+#mail_form p#form_submit {
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  border-top: 0.1rem solid #d1d0d2;
+}
+
+#mail_form input[type="button"] {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+  line-height: 1;
+  background: #2f2f79;
+  border-radius: 0.5rem;
+  color: #efefef;
+  -webkit-appearance: none;
+}
+
+#mail_form input[type="button"]:hover {
+  cursor: pointer;
+  background: #121230;
+  transition: 0.5s;
+}
+
+#mail_form input#form_submit_button {
+  margin-left: 35%;
+}
+
+#submit_button {
+  text-align: center;
+}
+
+/* --responsive----------------------------------------------------------------------------------------------------------------- */
+/* 768pixel start */
+@media screen and (max-width: 768px) {
+  #mail_form {
+    width: 95%;
+  }
+  #mail_form dl {
+    overflow: visible;
+  }
+  #mail_form dl dt {
+    width: auto;
+    float: none;
+    text-align: left;
+    padding: 1rem 0 0.5rem;
+    font-weight: bold;
+  }
+  #mail_form dl dt span {
+    font-weight: normal;
+  }
+  #mail_form dl dd {
+    width: auto;
+    float: none;
+    border-top: none;
+    padding: 0 0 1.3rem 0;
+  }
+}
+
+/* -- for JavaScript ここから -------------------------------------------------------------------------------- */
+#mail_form dl dt span.required,
+#mail_form dl dt span.optional {
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* -- for JavaScript ここまで -------------------------------------------------------------------------------- */
+#mail_form input#form_submit_button {
+  margin-left: 0;
+}
+
+#mail_form input#phone,
+#mail_form input#schedule {
+  width: 50%;
+}
+
+/* 768pixel end */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #2f2f79;
+  color: color-text-p;
+  padding: 0 0 2rem 0;
+}
+#footer .footer-top {
+  background: #5252bc;
+  color: color-text-p;
+  padding: 4rem 0 0 0;
+}
+#footer .footer-top .footer-info img {
+  margin-bottom: 4rem;
+}
+#footer .footer-top .footer-links,
+#footer .footer-top .footer-contact {
+  color: #efefef;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+#footer .footer-top .footer-links h4,
+#footer .footer-top .footer-contact h4 {
+  margin-bottom: 1rem;
+}
+#footer .footer-top .footer-links ul,
+#footer .footer-top .footer-contact ul {
+  list-style: none;
+}
+#footer .footer-top .footer-links ul li,
+#footer .footer-top .footer-contact ul li {
+  color: #efefef;
+  padding: 1rem 0;
+}
+#footer .footer-top .footer-links ul a,
+#footer .footer-top .footer-contact ul a {
+  color: #efefef;
+}
+#footer .footer-top .social-links {
+  margin-top: 2rem;
+}
+#footer .footer-top .social-links a {
+  background: #2f2f79;
+  color: #efefef;
+  display: inline-block;
+  line-height: 2.5;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  transition: 0.3s;
+}
+#footer .copyright {
+  color: #efefef;
+  text-align: center;
+  padding-top: 2rem;
+}
+/* .timeline-box iframe { width: 740px !important; } */

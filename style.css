@@ -4,9 +4,10 @@ nav ul {
 }
 
 ul ul {
+  background: rgba(255, 255, 255, 0.75);
   display: none;
   position: absolute;
-  width:250px;
+  width:200px;
 }
 
 .navbar-brand {
@@ -16,20 +17,20 @@ ul ul {
 
 nav ul li {
   float: right;
-  width: 250px;
+  width: 200px;
 }
 
-nav ul li a {
+a {
   text-decoration: none;
 }
 
 li {
   margin: 20px 5px 0px;
   padding: 5px;
-  background-color: #fff;
+  text-align: center;
 }
 
-#header {
+/* #header {
   height: 100px;
 }
 
@@ -43,9 +44,9 @@ li {
   float: right;
   display: inline-block;
   width: 40%;
-}
+} */
 
-.riyuki_color_back {
+/* .riyuki_color_back {
   display: inline-block;
   width: 100%;
 }
@@ -68,18 +69,18 @@ li {
 .himeko_color_back {
   display: inline-block;
   width: 100%;
-}
+} */
 
 /* div {
   display: block;
 } */
 
-.prof-text {
+/* .prof-text {
   margin: 0 auto;
   text-align: center;
 }
 
-.staff, .google-calendar {
+.staff,.youtube-box, .google-calendar {
   display:flex;
   align-items:center;
   justify-content:center;
@@ -92,11 +93,69 @@ li {
 #luna>div, #solu>div {
   display: inline-block;
   width: 100%;
-}
+  height: auto;
+} */
 
 header {
-  background-color: #fff;
   width: 100%;
   top: 0;
   left: 0;
+}
+
+/* ul ul li {
+  background-color: transparent;
+} */
+
+/* h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+} */
+
+.text-center {
+  text-align: center;
+}
+
+.group-title {
+  font-size: 2rem;
+  color: #121230;
+  background: repeating-linear-gradient(45deg, transparent, transparent 1rem, #eceafd 0, #eceafd 2rem, transparent 0, transparent 3rem, #f1f0ff 0, #f1f0ff 4rem, transparent 0, transparent 5rem, #f0f0fa 0, #f0f0fa 6rem, transparent 0, transparent 7rem, #edecfa 0, #edecfa 8rem), repeating-linear-gradient(-45deg, transparent, transparent 1rem, #edecfc 0, #edecfc 2rem, transparent 0, transparent 3rem, #f8f7ff 0, #f8f7ff 4rem, transparent 0, transparent 5rem, #f5f3fc 0, #f5f3fc 6rem), whitesmoke;
+  background-blend-mode: multiply;
+}
+
+#luna>div>div, #solu>div>div, .flex-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.grow {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+header img {
+  margin: 15px 20px;
+}
+
+.google-calendar {
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
