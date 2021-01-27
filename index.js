@@ -1,8 +1,8 @@
-$(function() {
-    $("#navi").children("li").hover(function() {
-        $(this).children("ul").stop().slideToggle(100)
-    });
-});
+// $(function() {
+//     $("#navi").children("li").hover(function() {
+//         $(this).children("ul").stop().slideToggle(100)
+//     });
+// });
 
 $(function() {
     var headerPos = $("header").offset().top;
@@ -28,3 +28,4 @@ $(function() {
         return false;
     })
 })
+

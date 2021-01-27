@@ -725,11 +725,11 @@ html {
   float: right;
   margin: 0.5rem 0;
 }
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   #nav-menu-container {
     display: none;
   }
-}
+} */
 
 .navbar-brand img {
   float: left;
